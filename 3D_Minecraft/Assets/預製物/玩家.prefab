@@ -258,7 +258,7 @@ GameObject:
   - component: {fileID: 7371302277694406692}
   - component: {fileID: 7352643233905208608}
   m_Layer: 8
-  m_Name: Main Camera
+  m_Name: "\u651D\u5F71\u6A5F"
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -309,7 +309,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967039
+    m_Bits: 4294967295
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -5475,7 +5475,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7371457150067805984}
   m_Layer: 8
-  m_Name: "\u651D\u5F71\u6A5F"
+  m_Name: "\u651D\u5F71\u6A5F\u6839\u7269\u4EF6"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5490,7 +5490,7 @@ Transform:
   m_GameObject: {fileID: 7369493284423099616}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -3.4671271e-16, y: 0.17866261, z: 1.0855757}
-  m_LocalScale: {x: 1, y: 0.99999994, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7371302277694406692}
   m_Father: {fileID: 7373506562667399000}
@@ -5702,6 +5702,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34c50f08ccb1a6745a6b3485574a501c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rangeCollection: 2.5
 --- !u!1 &7369511068721397494
 GameObject:
   m_ObjectHideFlags: 0
@@ -6269,7 +6270,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7371502491781541610
 Transform:
   m_ObjectHideFlags: 0
