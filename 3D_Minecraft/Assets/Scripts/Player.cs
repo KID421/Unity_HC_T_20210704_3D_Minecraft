@@ -12,12 +12,19 @@ public class Player : MonoBehaviour
     #endregion
 
     #region 事件
+    /// <summary>
+    /// 道具管理器
+    /// </summary>
+    private Inventory inventory;
+
     private void Start()
     {
         rig = GetComponent<Rigidbody>();
         // transform.Find("子物件名稱") 透過名稱搜尋子物件
         ani = transform.Find("男生").GetComponent<Animator>();
         traCamera = GameObject.Find("攝影機").transform;
+
+        inventory = GameObject.Find("道具管理器").GetComponent<Inventory>();
     }
 
     private void OnDrawGizmos()
@@ -30,6 +37,11 @@ public class Player : MonoBehaviour
     private void Update()
     {
         Collection();
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        EatProp(collision.gameObject);
     }
     #endregion
 
@@ -50,6 +62,18 @@ public class Player : MonoBehaviour
                 // 對採集物造成傷害
                 hit.collider.GetComponent<ObjectCollection>().Hit(1);
             }
+        }
+    }
+
+    /// <summary>
+    /// 吃道具，判定吃到的道具並刪除道具累加道具
+    /// </summary>
+    /// <param name="prop">吃到的道具</param>
+    private void EatProp(GameObject prop)
+    {
+        if (prop.tag == "可以吃的道具")
+        {
+            inventory.AddProp(prop.GetComponent<Prop>());
         }
     }
     #endregion
