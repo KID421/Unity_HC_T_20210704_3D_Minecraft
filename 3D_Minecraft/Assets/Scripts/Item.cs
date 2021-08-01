@@ -9,4 +9,6 @@ public class Item : MonoBehaviour
     public GameObject goItem;
     [Header("當前數量")]
     public int count;
+    [Header("道具類型")]
+    public PropType propType;
 }

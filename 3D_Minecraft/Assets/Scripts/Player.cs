@@ -52,13 +52,14 @@ public class Player : MonoBehaviour
     #endregion
 
     #region 方法
-
     /// <summary>
     /// 採集：繪製射線並判定是否攻擊以及採集物件
+    /// 條件：判定裝備管理器，當前的裝備類型，不是地形物件才能採集，包含：無、武器
     /// </summary>
     private void Collection()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        // 如果 按下左鍵 並且 裝備管理器 不是使用地形物件
+        if (Input.GetKeyDown(KeyCode.Mouse0) && !EquipmentManager.instance.usingTerrainObject)
         {
             // 射線碰撞資訊
             RaycastHit hit;

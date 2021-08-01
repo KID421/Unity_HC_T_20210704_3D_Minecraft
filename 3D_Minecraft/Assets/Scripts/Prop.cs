@@ -9,4 +9,14 @@ public class Prop : MonoBehaviour
     public Sprite sprProp;
     [Header("道具物件")]
     public GameObject goProp;
+    [Header("道具類型")]
+    public PropType propType;
+}
+
+/// <summary>
+/// 道具類型：無、地形物件、武器
+/// </summary>
+public enum PropType
+{
+    None, TerrainObject, Weapon
 }
