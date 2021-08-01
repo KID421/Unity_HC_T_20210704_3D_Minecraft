@@ -1,13 +1,15 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using System.Linq;
 using System.Collections.Generic;
 
 /// <summary>
-/// 切換道具管理器
+/// 切換道具管理器、合成系統
 /// 切換道具：裝備與道具欄
 /// 點擊後將道具資訊存放到【選取中的道具】
 /// 並判定與另一個欄位切換
+/// 切換道具至合成素材區後匹配有沒有對應到合成表物件
 /// </summary>
 public class InventorySwitch : MonoBehaviour
 {
@@ -18,7 +20,15 @@ public class InventorySwitch : MonoBehaviour
     public GraphicRaycaster graphic;
     [Header("事件系統：EventSystem")]
     public EventSystem eventSystem;
+    [Header("素材 1 ~ 4")]
+    public Item[] itemMerge;
+    [Header("合成表")]
+    public MergeTable mergeTable;
 
+    /// <summary>
+    /// 當前合成區的組合
+    /// </summary>
+    private GameObject[] goMergeCurrent = new GameObject[4];
     /// <summary>
     /// 事件碰撞座標資訊
     /// </summary>
@@ -163,9 +173,24 @@ public class InventorySwitch : MonoBehaviour
             chooseItem.goItem = null;
             chooseItem.propType = PropType.None;
             traChooseProp.gameObject.SetActive(false);
+            this.chooseItem = false;                        // 手上沒有道具 - this 指此類別，可以存取類別定義的欄位或方法
         }
 
+        CheckMergeData();
         EquipmentManager.instance.ShowEquipment();
+    }
+
+    /// <summary>
+    /// 每次放完素材後處理
+    /// 檢查目前合成素材在合成表內是否有相同的資料
+    /// </summary>
+    private void CheckMergeData()
+    {
+        // 將合成區素材存放到陣列內
+        for (int i = 0; i < itemMerge.Length; i++)
+        {
+            goMergeCurrent[i] = itemMerge[i].goItem;
+        }
     }
     #endregion
 }
