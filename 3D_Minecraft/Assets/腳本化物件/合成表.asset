@@ -18,13 +18,15 @@ MonoBehaviour:
     - {fileID: 4030790031397216529, guid: a88202dbecd856b409a1985513849fc1, type: 3}
     - {fileID: 0}
     - {fileID: 0}
-    goMergeResult: {fileID: 0}
+    goMergeResult: {fileID: 2238956936633396544, guid: 4aaa81e181dad0442a69e96b3b4ab839,
+      type: 3}
   - goMerge:
     - {fileID: 4030790031397216529, guid: a88202dbecd856b409a1985513849fc1, type: 3}
     - {fileID: 4030790031397216529, guid: a88202dbecd856b409a1985513849fc1, type: 3}
     - {fileID: 0}
     - {fileID: 4030790031397216529, guid: a88202dbecd856b409a1985513849fc1, type: 3}
-    goMergeResult: {fileID: 0}
+    goMergeResult: {fileID: 738171747184577328, guid: cbe119c418c9e6f41965314551170dd9,
+      type: 3}
   - goMerge:
     - {fileID: 0}
     - {fileID: 0}
