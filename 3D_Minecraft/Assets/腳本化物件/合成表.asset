@@ -18,7 +18,8 @@ MonoBehaviour:
     - {fileID: 4030790031397216529, guid: a88202dbecd856b409a1985513849fc1, type: 3}
     - {fileID: 0}
     - {fileID: 0}
-    goMergeResult: {fileID: 0}
+    goMergeResult: {fileID: 2722156881276352976, guid: 36a00cf2177ac804e9c6e516768c3680,
+      type: 3}
   - goMerge:
     - {fileID: 4030790031397216529, guid: a88202dbecd856b409a1985513849fc1, type: 3}
     - {fileID: 4030790031397216529, guid: a88202dbecd856b409a1985513849fc1, type: 3}

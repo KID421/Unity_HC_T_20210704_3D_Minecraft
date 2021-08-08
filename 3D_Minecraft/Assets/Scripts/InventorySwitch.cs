@@ -39,6 +39,9 @@ public class InventorySwitch : MonoBehaviour
     private bool chooseItem;
     #endregion
 
+    public int[] a = { 1, 1, 0, 0 };
+    public int[] b = { 1, 1, 0, 0 };
+
     #region 事件
     private InventoryItem inventoryItemChooseProp;
     private Item itemChooseProp;
@@ -47,6 +50,8 @@ public class InventorySwitch : MonoBehaviour
     {
         inventoryItemChooseProp = traChooseProp.GetComponent<InventoryItem>();
         itemChooseProp = traChooseProp.GetComponent<Item>();
+
+        print(a == b);
     }
 
     private void Update()
@@ -190,6 +195,13 @@ public class InventorySwitch : MonoBehaviour
         for (int i = 0; i < itemMerge.Length; i++)
         {
             goMergeCurrent[i] = itemMerge[i].goItem;
+        }
+
+        var a = mergeTable.allMergeData.Where(x => Enumerable.SequenceEqual(x.goMerge, goMergeCurrent));
+
+        foreach (var r in a)
+        {
+            print(r.goMergeResult.name);
         }
     }
     #endregion

@@ -6596,7 +6596,7 @@ MonoBehaviour:
   - {fileID: 440568716}
   - {fileID: 420490556}
   - {fileID: 2031598253}
-  mergeTable: {fileID: 0}
+  mergeTable: {fileID: 11400000, guid: 450ada25ecb5e9f4cb98cca12645f619, type: 2}
 --- !u!4 &1887221801
 Transform:
   m_ObjectHideFlags: 0
