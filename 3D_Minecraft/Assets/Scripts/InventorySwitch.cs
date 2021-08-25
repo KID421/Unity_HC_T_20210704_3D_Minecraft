@@ -137,6 +137,7 @@ public class InventorySwitch : MonoBehaviour
         chooseInventory.imgProp.enabled = false;                                // 關閉 選到的道具圖片
         chooseInventory.imgProp.sprite = null;                                  // 刪除 選到的道具圖片
         chooseInventory.textProp.text = "";                                     // 刪除 選到的道具數量
+        chooseInventory.hasProp = false;
 
         // 更新道具資訊 Item 將選中道具的資訊更新 並刪除 原本的
         updateItem.count = chooseItem.count;
